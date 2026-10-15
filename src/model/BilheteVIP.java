@@ -13,5 +13,6 @@ public class BilheteVIP extends Bilhete {
 
     @Override
     public boolean validar() {
+        return false;
     }
 }
