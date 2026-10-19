@@ -57,6 +57,7 @@
                 </constraints>
                 <properties>
                   <enabled value="false"/>
+                  <text value=""/>
                 </properties>
               </component>
               <component id="23aaa" class="javax.swing.JLabel">
@@ -110,6 +111,7 @@
             </constraints>
             <properties>
               <enabled value="false"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="3155f" class="javax.swing.JLabel">

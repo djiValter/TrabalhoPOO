@@ -96,8 +96,5 @@ public class SignUpView {
         });
     }
 
-    public JPanel getPanel() {
-        return panel1;
-    }
 
 }
