@@ -1,5 +1,5 @@
-package model;
 
+package model;
 
 public class BilheteNormal extends Bilhete {
 
@@ -14,6 +14,6 @@ public class BilheteNormal extends Bilhete {
 
     @Override
     public boolean validar() {
-
+        return getPreco() > 0 && getQuantidade() > 0;
     }
 }

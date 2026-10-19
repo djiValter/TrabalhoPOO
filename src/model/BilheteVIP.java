@@ -1,3 +1,4 @@
+
 package model;
 
 public class BilheteVIP extends Bilhete {
@@ -8,10 +9,11 @@ public class BilheteVIP extends Bilhete {
 
     @Override
     public double calcularPrecoFinal() {
-        return getPreco();
+        return getPreco() * 1.5;
     }
 
     @Override
     public boolean validar() {
+        return getPreco() > 0 && getQuantidade() > 0;
     }
 }
