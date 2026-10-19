@@ -1,25 +1,18 @@
-import View.LoginView;
-import View.SignUpView;
 
+import View.LoginView;
 import javax.swing.*;
 
 public class Main {
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            LoginView loginView = new LoginView();
-            SignUpView signUpView = new SignUpView();
+            LoginView login = new LoginView();
 
-            JTabbedPane separadores = new JTabbedPane();
-            separadores.addTab("Login", loginView.getPanel());
-            separadores.addTab("Criar conta", signUpView.getPanel());
-
-            JFrame janela = new JFrame("Teste das telas");
-            janela.setContentPane(separadores);
-            janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            janela.setSize(500, 450);
-            janela.setLocationRelativeTo(null);
-            janela.setVisible(true);
+            JFrame frame = new JFrame("Login");
+            frame.setContentPane(login.getPanel());
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(400, 300);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
         });
     }
 }
