@@ -51,7 +51,6 @@ O projeto aplica conceitos fundamentais da Programação Orientada a Objetos (PO
 - Consultar e administrar eventos.
 - Gerir bilhetes e informações da plataforma.
 
-> **Nota:** As funcionalidades acima representam o âmbito previsto do sistema. Algumas poderão estar ainda em desenvolvimento.
 
 ## 🧠 Conceitos de Programação Aplicados
 
@@ -75,8 +74,6 @@ O projeto aplica conceitos fundamentais da Programação Orientada a Objetos (PO
 - **Git e GitHub** — controlo de versões e colaboração.
 
 ## 🗂️ Estrutura do Projeto
-
-A organização pode variar de acordo com a implementação atual, mas uma estrutura recomendada é:
 
 ```text
 Sistema-Bilhetes-Eventos/
@@ -102,8 +99,6 @@ Sistema-Bilhetes-Eventos/
 ├── .gitignore
 └── README.md
 ```
-
-*Esta árvore é ilustrativa. Ajusta os nomes e as pastas à estrutura real do teu repositório.*
 
 ## ⚙️ Pré-requisitos
 
@@ -164,8 +159,6 @@ Abre o projeto no IntelliJ IDEA, localiza a classe principal que contém o méto
 
 As capturas de ecrã da aplicação podem ser adicionadas nesta secção para apresentar a interface gráfica.
 
-Exemplo de organização:
-
 ```text
 screenshots/
 ├── login.png
@@ -173,8 +166,6 @@ screenshots/
 ├── promotor.png
 └── administrador.png
 ```
-
-Quando as imagens estiverem no repositório, podes apresentá-las assim:
 
 ```markdown
 ![Ecrã de Login](screenshots/login.png)
