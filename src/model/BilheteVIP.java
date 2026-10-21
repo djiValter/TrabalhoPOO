@@ -13,5 +13,6 @@ public class BilheteVIP extends Bilhete {
 
     @Override
     public boolean validar() {
+        return getPreco() > 0 && getQuantidade() > 0;
     }
 }
