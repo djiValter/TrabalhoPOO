@@ -1,25 +1,30 @@
-import View.LoginView;
-import View.SignUpView;
 
-import javax.swing.*;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(
+                Main.class.getResource("/view/dashboard.fxml")
+        );
+
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root, 1200, 750);
+
+        stage.setTitle("Sistema de Gestão de Eventos");
+        stage.setScene(scene);
+        stage.setMinWidth(900);
+        stage.setMinHeight(600);
+        stage.show();
+    }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            LoginView loginView = new LoginView();
-            SignUpView signUpView = new SignUpView();
-
-            JTabbedPane separadores = new JTabbedPane();
-            separadores.addTab("Login", loginView.getPanel());
-            separadores.addTab("Criar conta", signUpView.getPanel());
-
-            JFrame janela = new JFrame("Teste das telas");
-            janela.setContentPane(separadores);
-            janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            janela.setSize(500, 450);
-            janela.setLocationRelativeTo(null);
-            janela.setVisible(true);
-        });
+        launch(args);
     }
 }
