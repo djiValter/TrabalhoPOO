@@ -1,25 +1,33 @@
-import View.LoginView;
-import View.SignUpView;
+import database.DatabaseInitializer;
+import view.LoginView;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import java.sql.SQLException;
 
 public class Main {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            LoginView loginView = new LoginView();
-            SignUpView signUpView = new SignUpView();
 
-            JTabbedPane separadores = new JTabbedPane();
-            separadores.addTab("Login", loginView.getPanel());
-            separadores.addTab("Criar conta", signUpView.getPanel());
+        try {
+            DatabaseInitializer.criarAdminPadrao();
 
-            JFrame janela = new JFrame("Teste das telas");
-            janela.setContentPane(separadores);
-            janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            janela.setSize(500, 450);
-            janela.setLocationRelativeTo(null);
-            janela.setVisible(true);
-        });
+            SwingUtilities.invokeLater(LoginView::new);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+            SwingUtilities.invokeLater(() ->
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Não foi possível inicializar o sistema.\n"
+                                    + "Verifique a ligação ao PostgreSQL, "
+                                    + "o driver JDBC e a tabela usuarios.\n\n"
+                                    + e.getMessage(),
+                            "Erro de inicialização",
+                            JOptionPane.ERROR_MESSAGE
+                    )
+            );
+        }
     }
 }
