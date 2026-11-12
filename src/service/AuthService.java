@@ -1,3 +1,4 @@
+
 package service;
 
 import dao.UsuarioDAO;
@@ -11,10 +12,7 @@ public class AuthService {
         this.usuarioDAO = new UsuarioDAO();
     }
 
-    public Utilizador login(
-            String email,
-            String senha
-    ) {
+    public Utilizador login(String email, String senha) {
 
         if (email == null || email.isBlank()) {
             return null;
@@ -24,9 +22,6 @@ public class AuthService {
             return null;
         }
 
-        return usuarioDAO.autenticar(
-                email.trim(),
-                senha
-        );
+        return usuarioDAO.autenticar(email.trim(), senha);
     }
 }

@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="javafx-sdk-25.0">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/java-libs/postgresql-42.7.13.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$USER_HOME$/Downloads/openjfx-25.0.4_windows-x64_bin-sdk/javafx-sdk-25.0.4" />
